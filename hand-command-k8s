@@ -1,0 +1,3 @@
+kubectl create ns <namespace>
+kubectl config get-contexts ---> to know the current namespace details
+kubectl config set-context --current --namespace=namespace1 ---> set this namespace default.
