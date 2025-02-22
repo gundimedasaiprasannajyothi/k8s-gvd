@@ -1,3 +1,5 @@
 kubectl create ns <namespace>
 kubectl config get-contexts ---> to know the current namespace details
 kubectl config set-context --current --namespace=namespace1 ---> set this namespace default.
+kubectl get resourcequota --> to know the resourcesquota details in namespace
+
