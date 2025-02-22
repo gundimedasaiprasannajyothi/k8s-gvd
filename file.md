@@ -2,7 +2,7 @@
 
 ## 1. Set ResourceQuota for a Namespace
 ```sh
-kubectl create quota dev-quota --hard=cpu=2,memory=4Gi,pods=10 --namespace=dev
+kubectl create quota dev-quota --hard=cpu=2,memory=4Gi,pods=10 --namespace=dev --dry-run=client -o yaml > dev-quota.yaml
 ```
 
 ### Explanation:
