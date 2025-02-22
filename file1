@@ -1,0 +1,23 @@
+1. Set ResourceQuota for a Namespace
+
+kubectl create quota dev-quota --hard=cpu=2,memory=4Gi,pods=10 --namespace=dev
+
+This creates a ResourceQuota named dev-quota in the dev namespace with:
+
+Maximum 2 CPUs
+Maximum 4GiB Memory
+Maximum 10 pods
+
+To verify:
+kubectl get resourcequota dev-quota --namespace=dev
+kubectl describe resourcequota dev-quota --namespace=dev
+
+2. Set LimitRange for Pods in a Namespace
+kubectl create limitrange dev-limits --namespace=dev \
+  --pod-max=cpu=500m,memory=1Gi \
+  --pod-min=cpu=100m,memory=128Mi
+This creates a LimitRange named dev-limits in the dev namespace, enforcing:
+
+Maximum 500m CPU and 1GiB memory per pod
+Minimum 100m CPU and 128MiB memory per pod
+
