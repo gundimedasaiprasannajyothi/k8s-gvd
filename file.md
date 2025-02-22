@@ -9,8 +9,8 @@ kubectl create quota dev-quota \
 ```
 
 ### Explanation:
-- **`cpu=2`** → Maximum **2 CPUs**
-- **`memory=4Gi`** → Maximum **4GiB Memory**
+- **`cpu=2`** → Maximum **1 CPUs**
+- **`memory=4Gi`** → Maximum **1GiB Memory**
 - **`pods=10`** → Maximum **10 Pods**
 
 ### Verify ResourceQuota:
